@@ -35,6 +35,7 @@ marriage.Date = marriageDate;
 
 var currentHead = first.Husband;
 
+// Loop through generations 1 at a time and create Gedcom data
 foreach (var descendant in first.Husband.GetNestedChildren())
 {
     if (descendant != first.Husband && descendant != first.Wife)

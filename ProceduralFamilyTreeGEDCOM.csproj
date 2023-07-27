@@ -8,9 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="GeneGenie.Gedcom">
-      <HintPath>..\GeneGenie.Gedcom\GeneGenie.Gedcom\bin\Debug\net7.0\GeneGenie.Gedcom.dll</HintPath>
-    </Reference>
+    <PackageReference Include="GeneGenie.Gedcom" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="ProceduralFamilyTree">
       <HintPath>..\ProceduralFamilyTree\bin\Debug\net6.0\ProceduralFamilyTree.dll</HintPath>
     </Reference>
