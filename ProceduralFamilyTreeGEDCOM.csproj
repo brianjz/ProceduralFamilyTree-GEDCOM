@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="GeneGenie.Gedcom">
+      <HintPath>..\GeneGenie.Gedcom\GeneGenie.Gedcom\bin\Debug\net7.0\GeneGenie.Gedcom.dll</HintPath>
+    </Reference>
+    <Reference Include="ProceduralFamilyTree">
+      <HintPath>..\ProceduralFamilyTree\bin\Debug\net6.0\ProceduralFamilyTree.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="data\new.ged">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
