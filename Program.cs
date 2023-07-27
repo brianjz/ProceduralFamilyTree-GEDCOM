@@ -63,15 +63,11 @@ foreach (var descendant in first.Husband.GetNestedChildren())
     }
 }
 
-string outputGEDCOM = "k:\\temp\\rewritten.ged";
+string outputGEDCOM = "./data/rewritten.ged";
 GedcomRecordWriter.OutputGedcom(db, outputGEDCOM);
 Console.WriteLine($"Output database to rewritten.ged.");
 
-// Read all lines from the file into memory
+// Clean out blank lines as it is not part of GEDCOM standards and doesn't validate
 string[] lines = File.ReadAllLines(outputGEDCOM);
-
-// Filter out the empty lines
 string[] nonEmptyLines = Array.FindAll(lines, line => !string.IsNullOrWhiteSpace(line));
-
-// Overwrite the original file with the non-empty lines
 File.WriteAllLines(outputGEDCOM, nonEmptyLines);
